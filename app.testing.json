@@ -4,7 +4,7 @@
         name      : "Matchmaker Testing",
         script    : "npx",
         interpreter: "none",
-        args: "serve -s /home/ec2-user/matchmaker/build -p 57000"
+        args: "serve -s /home/ec2-user/testmatchmaker/build -p 57000"
       }
     ]
 }
