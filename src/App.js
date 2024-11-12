@@ -14,7 +14,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import Profile, { PersonalProfile } from './components/profile.js';
 import IndexPage from './pages/IndexPage.js';
 // import HowItWorks, { HowItWorksSpecificCarousel } from './pages/HowItWorks.js';
-// import Terms from './pages/Terms.js';
+import Terms from './pages/Terms.js';
 // import AllChats, { SpecificPersonsChat, SpecificPersonsChatAsMan } from './pages/Chats.js';
 // import PassResetLinkToBeRecieved, { PassResetSuccessful } from './components/forgottenpassword.js';
 // import ReCAPTCHA from 'react-google-recaptcha';
@@ -28,8 +28,8 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<IndexPage />} />
+                <Route path="/terms" element={<Terms />} />
                 {/* <Route path="/howitworks" element={<HowItWorks />} />
-                <Route path="/howitworks/:thecarousel" element={<HowItWorksSpecificCarousel />} />
                 <Route path="/login" element={<GoogleEnabledLogin url="/passcheck" />} />
                 <Route path="/recaptcha" element={<ReCAPTCHA sitekey={"6LfTO2YqAAAAAEJnKMWW2zz_wK972wr7z4yZEVSh"} />} />
                 <Route path="/forgottenpassword" element={<ForgotPassword url="/api/forgottenpassword" />} />
@@ -46,7 +46,6 @@ function App() {
 
                 <Route path="/html/signup_form.html" element={<Signup url="https://expatelitesingles.com/api/store_data" allquestions={femalequestions} gender="Female"/>} />
                 <Route path="/html/authcode.html" element={<AuthEntrypage />} />
-                <Route path="/terms" element={<Terms />} />
                 <Route path="/privacypolicy" element={<PrivacyPolicy />} />
 
                 <Route path="/profile/:profileid" element={<Profile />} />
