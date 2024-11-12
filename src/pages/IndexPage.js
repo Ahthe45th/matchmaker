@@ -23,7 +23,6 @@ const Banner = ({ images, speed = 0, linkitems, isempty }) => {
     }
 
     console.log(linkitems)
-
     if (isempty) {
         return (
             // <div className="w-11/12 overflow-x-hidden">
