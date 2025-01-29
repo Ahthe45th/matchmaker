@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3DYWR19RL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V3DYWR19RL');
+  </script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Women on site</title>
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+<body style="background-color:#000000;">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top bg-transparent collapse show">
+    <div class="container d-flex align-items-center">
+      <a class="text-dark me-auto" href="/"><i className="bi bi-house"></i></a>
+      <h6 class="me-auto"><a class="toggle-sidebar text-dark"><i class="bi bi-three-dots"></i></a></h6>
+      <h6 class="ms-auto"><a href="https://expatelitesingles.com/personalprofile/{{ email }}?id={{ id }}" class="text-dark"><i class="bi bi-person"></i></a></h6>
+    </div>
+  </header>
+
+
+  <div class="collapse pt-5" id="sidebar-left" tabindex="-1" role="dialog">
+      <div class="bg-transparent h-100 pt-1">
+        <!-- Split button -->
+        <ul class="list-group bg-transparent">
+          <li class="list-group-item bg-transparent menuitem pt-10"><a href="/html/about.html" class="text-left btn btn-lg btn-default col-xs-10 text-dark">ABOUT</a></li>
+          <li class="list-group-item bg-transparent menuitem pt-10"><a href="/html/testimonials.html" class="btn btn-block btn-default btn-lg text-dark">TESTIMONIALS</a></li>
+          <li class="list-group-item bg-transparent menuitem pt-10"><a href="/html/faqs.html" class="btn btn-block btn-default btn-lg text-dark">FAQ</a></li>
+          <li class="list-group-item bg-transparent menuitem pt-10"><a href="/html/matchmaking.html" class="btn btn-block btn-default btn-lg text-dark">MATCHMAKING</a></li>
+          <li class="list-group-item bg-transparent menuitem pt-10"><a href="/html/login.html" class="btn btn-block btn-default btn-lg text-dark">LOGIN</a></li>
+          <li class="list-group-item bg-transparent menuitem pt-10"><a href="/html/signup_form.html" class="btn btn-block btn-default btn-lg text-dark">SIGN UP</a></li>
+        </ul>
+        <hr>
+        <div class="btn-group btn-group-justified pt-10">
+          <a class="btn btn-instagram btn-lg"><i class="fa fa-fw fa-instagram"></i></a>
+          <a class="btn btn-twitter btn-lg"><i class="fa fa-fw fa-twitter"></i></a>
+          <a class="btn btn-github btn-lg"><i class="fa fa-fw fa-github"></i></a>
+        </div>
+      </div>
+  </div>
+
+  <div class="row m-1">
+    <form action="https://expatelitesingles.com/t/t/matchmaking_search" method="post">
+      <input type="text" id="searchbar" class="form-control bg-transparent text-dark w-100" name="email" value="" placeholder="Search via email ...">
+    </form>
+  </div>
+
+  <div class="row bg-transparent justify-content-center d-flex">
+    {%for i in range(0, women_len)%}
+      {% if data[i] %}
+        <div class="card m-1 col-lg-5 col-xl-5 col-md-12 col-sm-12 col-xs-12 bg-dark">
+          <hr class="text-light">
+          <div class="row bg-transparent m-2 d-flex rounded">
+            <p class="text-light fs-6">First Name: {{data[i]['data']['name']}}</p>
+            <p class="text-light fs-6">Email: {{data[i]['data']['EMAIL']}}</p>
+            <p class="text-light fs-6">Age: {{data[i]['data']['age']}}</p>
+            <p class="text-light fs-6">Package: {{data[i]['data']['package']}}</p>
+          </div>
+          
+          <div class="row bg-transparent m-2 d-flex rounded">
+              <div class="row d-flex justify-content-center">
+                
+              </div>
+              <!-- <button class="btn btn-light text-dark w-100 col-12">Change Package*</button> -->
+            <a class="btn btn-primary col-12" href="https://expatelitesingles.com/encontra/activate_email/{{ data[i]['data']['EMAIL'] }}">Activate</a>
+            <a class="btn btn-danger col-12" href="https://expatelitesingles.com/encontra/delete_email/{{ data[i]['data']['EMAIL'] }}">Delete</a>
+          </div>
+          <hr class="text-light">
+        </div>
+      {% endif %}
+    {%endfor%}
+
+    <div class="row row-cols-3">
+      <a class="btn btn-dark" href="https://expatelitesingles.com/encontra/matchmaking_dashboard/{{ prevpage }}">Prev</a>
+      <button class="btn btn-light">{{ page }}</button>
+      <a class="btn btn-dark" href="https://expatelitesingles.com/encontra/matchmaking_dashboard/{{ nextpage }}">Next</a>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Template Main JS File -->
+  <script src="/assets/js/form_organizer.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/messages.js"></script>
+  <script src="/assets/js/mainpage.js"></script>
+  <script src="/assets/js/searcher.js"></script>
+</body>
+</html>

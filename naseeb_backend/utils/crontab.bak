@@ -1,0 +1,2 @@
+*/10 * * * * /usr/bin/python3 /home/ec2-user/halaallove/halaallove/scripts/write_index_page.py >/dev/null 2>&1
+*/10 * * * * /usr/bin/python3 /home/ec2-user/halaallove/halaallove/scripts/write_subdomain_to_signup.py >/dev/null 2>&1

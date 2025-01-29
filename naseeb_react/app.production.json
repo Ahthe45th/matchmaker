@@ -1,0 +1,10 @@
+{
+    apps : [
+      {
+        name      : "Matchmaker Production",
+        script    : "npx",
+        interpreter: "none",
+        args: "serve -s /home/ec2-user/matchmaker/build -p 58000"
+      }
+    ]
+}

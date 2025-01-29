@@ -1,0 +1,5 @@
+*/5 * * * * /usr/bin/restart_tunnel_and_webserver.zsh >/dev/null 2>&1
+*/10 * * * * /usr/bin/python3 /home/ec2-user/halaallove/halaallove/scripts/write_index_page.py >/dev/null 2>&1
+*/10 * * * * /usr/bin/python3 /home/ec2-user/halaallove/halaallove/scripts/write_subdomain_to_signup.py >/dev/null 2>&1
+*/5 * * * * /usr/bin/python3 /home/ec2-user/halaallove/halaallove/scripts/kyc_enumerator.py >/dev/null 2>&1
+*/5 * * * * /usr/bin/python3 /home/ec2-user/halaallove/halaallove/scripts/inactive_chats.py >/dev/null 2>&1

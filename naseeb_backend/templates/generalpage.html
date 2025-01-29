@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  
+  <title>Expat Elite Singles</title>
+  
+  {% include 'components/head_tag.html' %}
+</head>
+
+<body class="min-h-screen bg-gradient-to-r from-yellow-400 to-pink-600 font-medium flex flex-col justify-start md:justify-center items-center uppercase w-full overflow-y-none overflow-x-hidden kanit-regular">
+
+  <header id="main" class="flex flex-row justify-between m-2 w-full">
+    <img class="img-fluid h-20" src="/assets/img/logo.jpeg">
+  </header>
+
+  <main class="row d-flex justify-content-center m-2">
+    <a class="col-12 w-full py-2 px-20 bg-primary-500 border border-white text-white text-xl font-bold" href="/">
+      {{ pagetitle }}
+    </a>
+  </main>
+
+  <div class="m-2 flex flex-col md:flex-row justify-center md:px-10 w-full" id="mainrender"></div>
+
+  {% if "visible" in footervisibility %}
+    <footer id="footer" class="w-full row d-flex justify-content-center m-2">
+      <a class="w-full text-2xl uppercase bg-white text-black font-extrabold p-3 text-center" href="/login">LOGIN</a>
+    </footer>
+  {% else %}
+      <h1 class="sr-only hidden">No footer here.</h1>
+  {% endif %}
+
+  <footer id="footer" class="w-full flex flex-col items-center justify-center m-2">
+    <p class="w-full text-xs uppercase text-white text-center font-normal">Copyright © 2017</p>
+  </footer>
+  <!-- Vendor JS Files -->
+  {% include 'components/foot_tag.html' %}
+</body>
+</html>

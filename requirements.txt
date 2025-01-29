@@ -1,0 +1,10 @@
+Flask==3.0.3
+Flask_Cors==4.0.0
+mailtrap==2.0.1
+passlib==1.7.4
+Pillow==9.5.0
+python_bcrypt==0.3.2
+Requests==2.32.3
+setuptools==68.2.2
+Werkzeug==3.0.4
+pymongo
