@@ -4,7 +4,6 @@ import json
 import logging
 import datetime 
 
-import RAHIB.UTILS.storage.Location as Location
 
 openaikey = ''
 client = OpenAI(api_key=openaikey)
